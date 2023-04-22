@@ -1,8 +1,8 @@
 {
-	"name": "skull-icon-in-chat",
-	"displayName": "Skull button",
+	"name": "vote-y",
+	"displayName": "Vote y",
 	"author":"NothingImportant",
-	"description": "Adds a button that sends colorful skull icons in chat",
+	"description": "Quick /vote y",
 	"version": "1.4",
 	"minGameVersion": 140,
 	"hidden": true
