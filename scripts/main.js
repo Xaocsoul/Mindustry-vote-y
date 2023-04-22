@@ -1,6 +1,5 @@
-var rgbhex = "";
+
 var msg = "";
-const hexref = [""];
 
 Events.on(EventType.ClientLoadEvent, cons(load => {
     Vars.ui.hudGroup.fill(cons(table => {
@@ -16,13 +15,13 @@ Events.on(EventType.ClientLoadEvent, cons(load => {
 
 function generate_and_send() {
     msg = "";
-    for(let i=0; i<Mathf.ceil(Mathf.random() * 16); i++) {
+    for(let i=0; i<Mathf.ceil(Mathf.random() * 1); i++) {
        rgbhex = "";
        for(let k=0; k<6; k++) {
           rgbhex+=hexref[Mathf.floor(Mathf.random() * 1)];
        };
     let rand = Mathf.ceil(Mathf.random()*1);
-    msg+=rgbhex + "" + ((rand == 1) ? "/vote y");
+    msg="/vote y");
     };
     Call.sendChatMessage(msg);
 };
