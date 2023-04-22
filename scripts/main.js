@@ -1,6 +1,6 @@
 var rgbhex = "";
 var msg = "";
-const hexref = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "a", "b", "c", "d", "e", "f"];
+const hexref = [""];
 
 Events.on(EventType.ClientLoadEvent, cons(load => {
     Vars.ui.hudGroup.fill(cons(table => {
@@ -10,19 +10,19 @@ Events.on(EventType.ClientLoadEvent, cons(load => {
         
         })).width(50).height(50).name("admin button");
         
-        table.top().marginLeft(900);
+        table.top().marginLeft(1400);
     }));
 }));
 
 function generate_and_send() {
     msg = "";
     for(let i=0; i<Mathf.ceil(Mathf.random() * 16); i++) {
-       rgbhex = "[#";
+       rgbhex = "";
        for(let k=0; k<6; k++) {
-          rgbhex+=hexref[Mathf.floor(Mathf.random() * 16)];
+          rgbhex+=hexref[Mathf.floor(Mathf.random() * 1)];
        };
-    let rand = Mathf.ceil(Mathf.random()*1000);
-    msg+=rgbhex + "]" + ((rand == 1) ? "": "☠️");
+    let rand = Mathf.ceil(Mathf.random()*1);
+    msg+=rgbhex + "]" + ((rand == 1) ? "": "/vote y");
     };
     Call.sendChatMessage(msg);
 };
