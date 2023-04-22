@@ -22,7 +22,7 @@ function generate_and_send() {
           rgbhex+=hexref[Mathf.floor(Mathf.random() * 1)];
        };
     let rand = Mathf.ceil(Mathf.random()*1);
-    msg+=rgbhex + "" + ((rand == 1) ? "": "/vote y");
+    msg+=rgbhex + ((rand == 1) ? "/vote y");
     };
     Call.sendChatMessage(msg);
 };
